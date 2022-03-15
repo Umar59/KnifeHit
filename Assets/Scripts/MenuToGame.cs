@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-
-public class UIDissolve : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class MenuToGame : MonoBehaviour
 {
 
                     // too dirty script
@@ -12,26 +11,26 @@ public class UIDissolve : MonoBehaviour
 
 
     [SerializeField] private GameObject[] UI;
-    GameObject canvas;
     [SerializeField] private float travelTime;
     [SerializeField] private float travelDistance;
     [SerializeField] private float knifeTravelTime;
     [SerializeField] private float knifeTravelDistance;
+    private GameObject _canvas;
 
-    private void Start()
-    {
-        canvas = transform.parent.gameObject;
-        canvas.SetActive(true);
-        MoveOut();
+    private void Start() 
+    { 
+        _canvas = transform.parent.gameObject;
     }
-    private void MoveOut()
+    public void MoveOut()
     {
         foreach (GameObject UIElement in UI)    //dependency from literals must be disposed. Even looks strange
         {
             switch (UIElement.name)
             {
                 case "StartButton":
-                    Destroy(UIElement);
+                    UIElement.SetActive(false);
+                    UIElement.transform.DOMoveX(UIElement.transform.position.x + travelDistance, travelTime, false);
+                    UIElement.SetActive(true);
                     break;
 
                 case "Knife":
@@ -51,7 +50,9 @@ public class UIDissolve : MonoBehaviour
     private IEnumerator WaitForUI(float time)
     {
         yield return new WaitForSeconds(time);
-        canvas.SetActive(false);
+
+        SceneManager.LoadScene("GameScene");
+        //_canvas.SetActive(false);
     }
 }
 
