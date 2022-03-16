@@ -318,7 +318,7 @@ MonoBehaviour:
   OnItemSpawn:
     m_PersistentCalls:
       m_Calls: []
-  _item: {fileID: 0}
+  _item: {fileID: 11400000, guid: 06c3140def0f33c46890f57f32c5bfe3, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
