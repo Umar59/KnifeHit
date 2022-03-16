@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     public void Spawn(ObjectsContainer objToSpawn)
     {
         Debug.Log("spawn");
-        if (objToSpawn.isKnife)     Instantiate(objToSpawn.obj, _playerSpawnPoint.position, Quaternion.Euler(0f, 0f, 0f));
-        else                        Instantiate(objToSpawn.obj, _enemySpawnPoint.position, Quaternion.Euler(0f, 0f, 0f));
+        if (objToSpawn.IsKnife)     Instantiate(objToSpawn.Obj, _playerSpawnPoint.position, Quaternion.Euler(0f, 0f, 0f));
+        else                        Instantiate(objToSpawn.Obj, _enemySpawnPoint.position, Quaternion.Euler(0f, 0f, 0f));
     }
 }
