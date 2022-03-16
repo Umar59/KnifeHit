@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class MoveMenu: MonoBehaviour
 {
     [SerializeField] private GameObject _nextMenu;
+    [SerializeField] private UnityEvent OnGameStart;
     private GameObject _currentMenu;
 
     private void Start()
-    { 
+    {
         _currentMenu = this.transform.parent.gameObject;
     }
     public void Move(GameObject _nextMenu)
@@ -29,6 +31,6 @@ public class MoveMenu: MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        OnGameStart?.Invoke();
     }
 }
