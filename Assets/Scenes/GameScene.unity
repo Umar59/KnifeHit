@@ -286,7 +286,7 @@ MonoBehaviour:
   _enemySpawnPoint: {fileID: 215641699}
   _playerSpawnPoint: {fileID: 870861639}
   objToSpawn: {fileID: 11400000, guid: cbdc75c976fb63647874b02ea02fcc5c, type: 2}
-  objToSpawn3: {fileID: 11400000, guid: 06c3140def0f33c46890f57f32c5bfe3, type: 2}
+  knifeSkin: {fileID: 11400000, guid: 134b1dd6d28c08d4d9076fbdfcffae62, type: 2}
 --- !u!4 &368995422
 Transform:
   m_ObjectHideFlags: 0

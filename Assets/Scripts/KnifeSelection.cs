@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class KnifeSelection : MonoBehaviour
 {
+    [SerializeField] private Skins skin;
 
-    public void KnifeSelecting()
-    {
-        
-        Debug.Log(TriggerOverlap._triggerCapture.name);
-    }
-    public void KnifeSelected()
-    {
-        Debug.Log("knifeSelected");
-        Debug.Log(TriggerOverlap._triggerCapture.name);
-        
-    }
+    //here the knife in between will be highlighted
+    public void KnifeSelecting() => Debug.Log(TriggerOverlap._triggerCapture); 
+    public void KnifeSelected() => skin.selectedSkinName = TriggerOverlap._triggerCapture;
+
 }

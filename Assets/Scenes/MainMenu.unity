@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 4912947573243358818, guid: 6baaf8ed232b5024ab26ee100b90db60, type: 3}
+  _knife: {fileID: 11400000, guid: 59a6354409f22514ca01f72e40f19abd, type: 2}
 --- !u!50 &136963648
 Rigidbody2D:
   serializedVersion: 4
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.1
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 0.22
   m_Viewport: {fileID: 689120490}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 1547349805443433955, guid: ddd73860e788caf47b2e3917d6bdc568, type: 3}
+  _knife: {fileID: 11400000, guid: 1d10802bfae6974478e76a9d676ac460, type: 2}
 --- !u!50 &213709472
 Rigidbody2D:
   serializedVersion: 4
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 951377185137993564, guid: f50567709a4475443a3b457d3bfd7256, type: 3}
+  _knife: {fileID: 11400000, guid: 8354f9b30e00b19469812939dc309fed, type: 2}
 --- !u!50 &303418333
 Rigidbody2D:
   serializedVersion: 4
@@ -837,7 +837,6 @@ RectTransform:
   - {fileID: 1211508020}
   - {fileID: 1689276129}
   - {fileID: 1618200750}
-  - {fileID: 781865726}
   - {fileID: 689120490}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1042,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360, y: -686.60004}
+  m_AnchoredPosition: {x: 360, y: -686.5414}
   m_SizeDelta: {x: 53, y: 243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465498471
@@ -1278,7 +1277,7 @@ RectTransform:
   - {fileID: 699770374}
   - {fileID: 585678394}
   m_Father: {fileID: 312114152}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1297,6 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c36468c119e0104681c364cbd279e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skin: {fileID: 11400000, guid: 134b1dd6d28c08d4d9076fbdfcffae62, type: 2}
 --- !u!114 &689120492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1315,18 +1315,6 @@ MonoBehaviour:
       - m_Target: {fileID: 689120491}
         m_TargetAssemblyTypeName: KnifeSelection, Assembly-CSharp
         m_MethodName: KnifeSelecting
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1830670541}
-        m_TargetAssemblyTypeName: KnifeSelected, Assembly-CSharp
-        m_MethodName: KnifeSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1443,87 +1431,6 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
---- !u!1 &781865724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 781865726}
-  - component: {fileID: 781865725}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!331 &781865725
-SpriteMask:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781865724}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b10eb6ebfe0ff946b9903ac616042a5, type: 3}
-  m_MaskAlphaCutoff: 0.318
-  m_FrontSortingLayerID: 0
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
-  m_BackSortingLayer: 0
-  m_FrontSortingOrder: 0
-  m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
-  m_SpriteSortPoint: 0
---- !u!4 &781865726
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781865724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 81.259, y: 81.259, z: 81.259}
-  m_Children: []
-  m_Father: {fileID: 312114152}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795019738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 785441418005489889, guid: aeb5d2b567892f94dbd4b7ef5eb196e9, type: 3}
+  _knife: {fileID: 11400000, guid: 8427540bbf54ecf41bf0b1a92d7445bf, type: 2}
 --- !u!50 &822714333
 Rigidbody2D:
   serializedVersion: 4
@@ -1705,7 +1612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360, y: -451.7}
+  m_AnchoredPosition: {x: 360, y: -451.68045}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &949557863
@@ -1757,7 +1664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 6301708553489174228, guid: 2aee367658435104f90a626be7334128, type: 3}
+  _knife: {fileID: 11400000, guid: 06c3140def0f33c46890f57f32c5bfe3, type: 2}
 --- !u!50 &949557866
 Rigidbody2D:
   serializedVersion: 4
@@ -1969,7 +1876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 5153276405855081686, guid: a92d924b084aaff4f9a62475d50b78b4, type: 3}
+  _knife: {fileID: 11400000, guid: f6f0f49e883bdc84095fa2140387f553, type: 2}
 --- !u!50 &1072649338
 Rigidbody2D:
   serializedVersion: 4
@@ -2102,7 +2009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360, y: -1052.9001}
+  m_AnchoredPosition: {x: 360, y: -1052.7632}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181161265
@@ -2356,7 +2263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 253020112393144474, guid: 7a53e4ddaa2b11e40976bf9778cf55f4, type: 3}
+  _knife: {fileID: 11400000, guid: 43f4a2aeebbbb9e48b8f608e2e57b7ce, type: 2}
 --- !u!50 &1250032236
 Rigidbody2D:
   serializedVersion: 4
@@ -2427,7 +2334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 4153316134780351159, guid: 05ae13d53f9fd3a40b4bebd0c216a39d, type: 3}
+  _knife: {fileID: 11400000, guid: 765a8629cbff1ad47905aad4e1bbfb35, type: 2}
 --- !u!50 &1311938692
 Rigidbody2D:
   serializedVersion: 4
@@ -2610,7 +2517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360, y: -914.50006}
+  m_AnchoredPosition: {x: 360, y: -914.4022}
   m_SizeDelta: {x: 260, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671069896
@@ -2844,7 +2751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 9158895346585975884, guid: 903b07895abcd81428a847f5de783ae3, type: 3}
+  _knife: {fileID: 11400000, guid: 2f1f2108ccac3ee46a59f6d683203866, type: 2}
 --- !u!50 &1690797023
 Rigidbody2D:
   serializedVersion: 4
@@ -2941,49 +2848,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795684860}
   m_CullTransparentMesh: 1
---- !u!1 &1830670540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1830670542}
-  - component: {fileID: 1830670541}
-  m_Layer: 0
-  m_Name: KnifeSelectionSave
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1830670541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830670540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5faab06874376d84eafc7f7ec05e4bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1830670542
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830670540}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835026708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,7 +2980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2b0440282ce64c9f0905bcbd5289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knife: {fileID: 4190534819521386984, guid: def9868f2775762438faea4cb0bb438b, type: 3}
+  _knife: {fileID: 11400000, guid: 839644f7be9d70142abe55304429a8dd, type: 2}
 --- !u!50 &1905433458
 Rigidbody2D:
   serializedVersion: 4
@@ -3174,7 +3038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360, y: -1198.3}
+  m_AnchoredPosition: {x: 360, y: -1198.124}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071183345

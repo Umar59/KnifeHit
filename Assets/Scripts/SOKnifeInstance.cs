@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SOKnifeInstance : MonoBehaviour
 {
-    [SerializeField] private GameObject _knife;
+    [SerializeField] private ObjectsContainer _knife;
     private GameObject _instantiatedKnife;
+    public ObjectsContainer Knife { get => _knife; set => _knife = value; }
+
     private void Start()
     {
         KnifeInstantiate();
@@ -13,7 +15,7 @@ public class SOKnifeInstance : MonoBehaviour
     //to avoid multiple time instantiating we must make a pool?...
     public void KnifeInstantiate()
     {
-        _instantiatedKnife = Instantiate(_knife, transform.parent.position, Quaternion.Euler(0f, 0f, 0f));
+        _instantiatedKnife = Instantiate(_knife.Obj, transform.parent.position, Quaternion.Euler(0f, 0f, 0f));
         _instantiatedKnife.transform.parent = transform;
         _instantiatedKnife.transform.localPosition = Vector3.zero;
 

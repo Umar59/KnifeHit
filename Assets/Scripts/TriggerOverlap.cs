@@ -6,13 +6,11 @@ using UnityEngine.Events;
 public class TriggerOverlap : MonoBehaviour
 {
     [SerializeField] private UnityEvent Trigger = new UnityEvent();
-    public static GameObject _triggerCapture;
-
-    public GameObject TriggerCapture { get => _triggerCapture; set => _triggerCapture = value; }
+    public static string _triggerCapture;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _triggerCapture = collision.gameObject;
+        _triggerCapture = collision.transform.parent.GetComponent<SOKnifeInstance>().Knife.ObjName;
         Trigger?.Invoke();
     }
 }

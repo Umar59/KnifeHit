@@ -15,3 +15,4 @@ MonoBehaviour:
   obj: {fileID: 9158895346585975884, guid: 903b07895abcd81428a847f5de783ae3, type: 3}
   knifeCapacity: 0
   isKnife: 1
+  objName: Knife 7
