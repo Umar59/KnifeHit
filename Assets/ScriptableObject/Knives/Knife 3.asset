@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 5153276405855081686, guid: a92d924b084aaff4f9a62475d50b78b4, type: 3}
   knifeCapacity: 0
-  isKnife: 1
+  knivesSpawning: 0
   objName: Knife 3
+  spawnPosition: {fileID: 6443278959407352877, guid: 5d62808ecdc1d374e920a18ecb5ea598, type: 3}
+  objectType: 1

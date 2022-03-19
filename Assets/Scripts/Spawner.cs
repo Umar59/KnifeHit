@@ -1,31 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private Transform _enemySpawnPoint;
-    [SerializeField] private Transform _playerSpawnPoint;
-    [SerializeField] private Skins _enemySkin;
-    [SerializeField] private Skins _knifeSkin;
+    [Header("Enemy, player")] [SerializeField]
+    private Skins[] skins;
 
-    [SerializeField] private EnemyRotation rotation;
+    [Header("Knife skin menu you want to use on spawning knives")] [SerializeField]
+    private Skins knifeSkin;
 
     private void Start()
     {
-        rotation = _enemySkin.GetSkin().Obj.GetComponent<EnemyRotation>();
-        Spawn(_enemySkin.GetSkin());
-        Spawn(_knifeSkin.GetSkin());
-    }
-    public void Spawn(ObjectsContainer objToSpawn)
-    {
-        if (objToSpawn.IsKnife)     Instantiate(objToSpawn.Obj, _playerSpawnPoint.position, Quaternion.Euler(0f, 0f, 0f));
-        else                        Instantiate(objToSpawn.Obj, _enemySpawnPoint.position, Quaternion.Euler(0f, 0f, 0f));
-
-        if (rotation = objToSpawn.Obj.GetComponent<EnemyRotation>())
+        foreach (var skin in skins)
         {
-            rotation.CanRotate = true;
+            Spawn(skin.GetSkin());
         }
+    }
+
+    private void Spawn(ObjectsContainer objToSpawn)
+    {
+        if (objToSpawn.ObjectTypeGetter == ObjectsContainer.ObjectType.Enemy) SpawnKnives(objToSpawn);
+        else Instantiate(objToSpawn.Obj, objToSpawn.SpawnPosition.transform.position,
+                Quaternion.Euler(0f, 0f, 0f));
+    }
+
+    private void SpawnKnives(ObjectsContainer objToSpawn)
+    {
+        GameObject instantiatedEnemy = Instantiate(objToSpawn.Obj, objToSpawn.SpawnPosition.transform.position,
+            Quaternion.Euler(0f, 0f, 0f));
+ 
+        for (int i = 0; i < objToSpawn.KnivesSpawning; i++)
+        {
+            //to spawn knives randomly around the log
+            instantiatedEnemy.transform.Rotate(new Vector3(0f, 0f,10f * Random.Range(1f, 35f) ));       
+            GameObject instantiatedKnife = Instantiate(knifeSkin.GetSkin().Obj, new Vector3(0f, 0f, 0f),
+                Quaternion.Euler(0f, 0f, 0f));
+            instantiatedKnife.transform.parent = instantiatedEnemy.transform;
+        }
+
     }
 }
 

@@ -5,30 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Skins", menuName = "Skins")]
 public class Skins : ScriptableObject
 {
-    [SerializeField] private ObjectsContainer[] _skins;
-    public Dictionary<string, ObjectsContainer> skinsDictionary;
+    [SerializeField] private ObjectsContainer[] skins;
+    private Dictionary<string, ObjectsContainer> _skinsDictionary;
     public string selectedSkinName;
 
     private void OnEnable()
     {
-        skinsDictionary = new Dictionary<string, ObjectsContainer>();
-        for (int i = 0; i < _skins.Length; i++)
+        _skinsDictionary = new Dictionary<string, ObjectsContainer>();
+        for (int i = 0; i < skins.Length; i++)
         {
-            skinsDictionary.Add(_skins[i].ObjName, _skins[i]);
+            _skinsDictionary.Add(skins[i].ObjName, skins[i]);
         }
     }
-    public void ShowSkins()
-    {
-      
-        foreach (var skin in skinsDictionary)
-        {
-           //Debug.Log($"key:{skin.Key} objName: {skin.Value.ObjName} name: {skin.Value.name}");
-          //  Debug.Log(skinsDictionary.Count);
-        }
-    }
-    public ObjectsContainer GetSkin()
-    {
-        return skinsDictionary[selectedSkinName];
-    }
+    public ObjectsContainer GetSkin() { return _skinsDictionary[selectedSkinName]; }
 
 }
