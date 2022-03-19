@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca770fd2be611864db4c959cc9f1aa46, type: 3}
   m_Name: Enemy 3
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  knifeCapacity: 0
+  obj: {fileID: 2215202197717989755, guid: 2332cb43cf113594f85fd3ae9320c6e6, type: 3}
+  knifeCapacity: 6
+  knivesSpawning: 0
   isKnife: 0
+  objName: Enemy 3
