@@ -17,4 +17,20 @@ public class Notes
     // i made a bunch of prototypes with just core mechanics and nothing else.
     // in this particular game the core mechanics are simple and dumb so I can develop then whenever I want
     // I gotta make "bussiness logic" first (as uncle Bob would say)
+
+
+    //tasks: 
+    //- make "left knives to win" -UI
+    //- a nice skin selection UI
+    //- stats!
+    //- appleSpawn and appropriate spawn script
+    //- and sounds
+    //- add particles
+    //- add outline using shadergraph
+    //- tweening))) who knows - knows
+    //- lvl transitions
+    //- haptic feedback
+    //- log destroy - delay between knife throws
+    //- adjustable screen size
+    //- screen shake on gameover
 }
