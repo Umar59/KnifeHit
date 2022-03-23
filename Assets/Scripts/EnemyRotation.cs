@@ -8,6 +8,8 @@ public class EnemyRotation : MonoBehaviour
     [SerializeField] private Rotations[] rotations;
     [SerializeField] private GameObject obj;
 
+    private Sequence sequence;
+
     public bool CanRotate { get; set; } = true;
 
     private void OnEnable()
@@ -17,7 +19,7 @@ public class EnemyRotation : MonoBehaviour
 
     public void Rotation()
     {
-        Sequence sequence = DOTween.Sequence().SetAutoKill(false);
+        sequence = DOTween.Sequence().SetAutoKill(false);
 
         foreach (Rotations rotation in rotations)
         {
@@ -31,5 +33,19 @@ public class EnemyRotation : MonoBehaviour
 
         if (CanRotate) sequence.OnComplete(() => { sequence.Restart(); });
         else sequence.Kill();
+    }
+    private void OnCollisioEnter2D(Collision2D collision)
+    {
+        sequence.Pause();
+        Debug.Log("asdfa");
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        sequence.Pause();
+        Debug.Log("trigger");
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        sequence.Play();
     }
 }

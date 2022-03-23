@@ -21,6 +21,8 @@ public class SOKnifeInstance : MonoBehaviour
 
         _instantiatedKnife.GetComponent<SpriteRenderer>().sortingLayerName = "Knives";
         _instantiatedKnife.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        _instantiatedKnife.GetComponent<KnifeThrow>().enabled = false;
+        _instantiatedKnife.GetComponent<InputManager>().enabled = false;
 
     }
 }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - SpawnManager
+  - Knife
+  - Stuck Knife
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3257976929538685131}
   - component: {fileID: 4630640120613513367}
   - component: {fileID: -4248238882276912135}
+  - component: {fileID: -6193775486191797708}
   m_Layer: 0
   m_Name: Player 7
-  m_TagString: Untagged
+  m_TagString: Knife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,5 +138,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwingSpeed: 0.09
-  throwingDistance: 2
+  throwingDistance: 3
   spawner: {fileID: 0}
+  spawnDelay: 0.1
+--- !u!50 &-6193775486191797708
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158895346585975884}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

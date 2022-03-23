@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 266133870503917708}
   - component: {fileID: 4114661088371316708}
   - component: {fileID: 6346366318513308655}
+  - component: {fileID: -8094406354789686292}
+  - component: {fileID: -4576275419732551271}
+  - component: {fileID: 8810885949612274811}
   m_Layer: 0
   m_Name: Player 3
-  m_TagString: Untagged
+  m_TagString: Knife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,3 +112,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58, y: 2.43}
   m_EdgeRadius: 0
+--- !u!114 &-8094406354789686292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153276405855081686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cd1508d883eb4419d58125a0a0b1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchDelay: 0.12
+--- !u!114 &-4576275419732551271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153276405855081686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90ec0cb48a8f9d40855515f9efab84c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwingSpeed: 0.09
+  throwingDistance: 3
+  spawner: {fileID: 0}
+--- !u!50 &8810885949612274811
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153276405855081686}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
