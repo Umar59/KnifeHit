@@ -256,6 +256,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf0f8acd49c4b0140a8732915b6c71ce, type: 2}
   - {fileID: 11400000, guid: 134b1dd6d28c08d4d9076fbdfcffae62, type: 2}
   knifeSkin: {fileID: 11400000, guid: 134b1dd6d28c08d4d9076fbdfcffae62, type: 2}
+  spawnRotationFrom: 30
+  spawnRotationTo: 90
 --- !u!4 &368995422
 Transform:
   m_ObjectHideFlags: 0
@@ -396,6 +398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2d725a635e0b14ebcf7924afbbcc89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 11400000, guid: 222f82ce02004c04cb102b19fc942855, type: 2}
+  maxLevel: 4
+  enemySkin: {fileID: 11400000, guid: bf0f8acd49c4b0140a8732915b6c71ce, type: 2}
 --- !u!1 &1315556751
 GameObject:
   m_ObjectHideFlags: 0

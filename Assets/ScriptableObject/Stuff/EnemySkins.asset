@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae120834d5741d4d9d5674b16e085c1, type: 3}
   m_Name: EnemySkins
   m_EditorClassIdentifier: 
-  skins:
+  skinContainers:
   - {fileID: 11400000, guid: cbdc75c976fb63647874b02ea02fcc5c, type: 2}
   - {fileID: 11400000, guid: 2cf203b3ad2f27e4d8556940cd10c2da, type: 2}
   - {fileID: 11400000, guid: 5be1115c84a23ec44ac14a24b23ceb60, type: 2}
@@ -20,3 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48222aac059bc0e44949fcddc7dec03b, type: 2}
   - {fileID: 11400000, guid: a72bf183de468e74a933e2ef7d9e2e1e, type: 2}
   selectedSkinName: Enemy 1
+  stage: 2

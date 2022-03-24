@@ -116,10 +116,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotations:
   - {fileID: 11400000, guid: 88f10fa66f8a48944800c47c2e1b9fa3, type: 2}
-  - {fileID: 11400000, guid: 88f10fa66f8a48944800c47c2e1b9fa3, type: 2}
-  - {fileID: 11400000, guid: 2d46136210e6d3f4e83849620bcd0434, type: 2}
-  - {fileID: 11400000, guid: 88f10fa66f8a48944800c47c2e1b9fa3, type: 2}
-  - {fileID: 11400000, guid: 2d46136210e6d3f4e83849620bcd0434, type: 2}
   obj: {fileID: 6513940661683400718}
 --- !u!50 &-335013724940727027
 Rigidbody2D:
@@ -155,6 +151,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSkin: {fileID: 11400000, guid: bf0f8acd49c4b0140a8732915b6c71ce, type: 2}
-  OnWin:
-    m_PersistentCalls:
-      m_Calls: []

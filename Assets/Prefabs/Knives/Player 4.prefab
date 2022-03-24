@@ -93,7 +93,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4190534819521386984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4190534819521386984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f90ec0cb48a8f9d40855515f9efab84c, type: 3}
   m_Name: 
@@ -140,6 +140,9 @@ MonoBehaviour:
   throwingSpeed: 0.09
   throwingDistance: 3
   spawner: {fileID: 0}
+  OnGameOver:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &-403431302821772944
 Rigidbody2D:
   serializedVersion: 4

@@ -11,11 +11,14 @@ public class KnifeThrow : MonoBehaviour
     private Sequence sequence;
 
     public UnityEvent OnGameOver = new UnityEvent();
+    private GameObject gameManager;
 
     private void OnEnable()
     {
         transform.GetComponent<InputManager>().OnTouch += Throw;
         transform.GetComponent<InputManager>().OnTouch += SpawnNewKnife;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        OnGameOver.AddListener(gameManager.GetComponent<GameManager>().GameOver);
     }
     private void Start()
     {
@@ -23,9 +26,11 @@ public class KnifeThrow : MonoBehaviour
     }
     public void Throw()
     {
+        transform.GetComponent<Collider2D>().enabled = true;
         sequence = DOTween.Sequence();
         transform.GetComponent<InputManager>().OnTouch -= Throw;
         sequence.Append( gameObject.transform.DOMoveY(transform.position.y + throwingDistance, throwingSpeed).SetEase(Ease.InBack));
+
     }
 
     public void SpawnNewKnife()
@@ -52,12 +57,11 @@ public class KnifeThrow : MonoBehaviour
             transform.GetComponent<BoxCollider2D>().size = new Vector2(0.58f, 0.62f);
             transform.tag = "Stuck Knife";
             sequence.Kill();
-            // collider must be also resized...
         }
-        else if(collision.transform.tag == "Knife")
+        else if(collision.transform.tag == "Stuck Knife")
         {
+            OnGameOver?.Invoke();
             Debug.Log("gameover");
-            //OnGameOver?.Invoke();     first i need to fix knife multiple colliding;
         }
     }
 }

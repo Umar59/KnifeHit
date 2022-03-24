@@ -11,6 +11,7 @@ public class ObjectsContainer : ScriptableObject
     [SerializeField] private string objName;
     [SerializeField] private GameObject spawnPosition;
     [SerializeField] private ObjectType objectType;
+    [SerializeField] private int enemyStage;
 
     public GameObject Obj => obj;
     public int KnifeCapacity => knifeCapacity;
@@ -18,6 +19,8 @@ public class ObjectsContainer : ScriptableObject
     public string ObjName => objName;
     public GameObject SpawnPosition => spawnPosition;
     public ObjectType ObjectTypeGetter => objectType;
+
+    public int EnemyStage => enemyStage;
 
     public enum ObjectType
     {

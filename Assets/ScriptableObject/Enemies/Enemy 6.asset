@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Enemy 6
   m_EditorClassIdentifier: 
   obj: {fileID: 3893954594236292763, guid: c491e29e2b38d2b48befb8d5f2c511fb, type: 3}
-  knifeCapacity: 4
+  knifeCapacity: 7
   knivesSpawning: 4
   objName: Enemy 6
   spawnPosition: {fileID: 1230340071206985474, guid: 45a74efe4f0ee4f4c83e7fcc1f9264db, type: 3}
   objectType: 0
+  enemyStage: 6

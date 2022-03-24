@@ -9,7 +9,6 @@ public class Spawner : MonoBehaviour
     [Header("Knife skin menu you want to use on spawning knives")]
     [SerializeField]
     private Skins knifeSkin;
-
     public Skins[] Skins => skins;
 
     private void Start()
@@ -24,7 +23,7 @@ public class Spawner : MonoBehaviour
     {
         if (objToSpawn.ObjectTypeGetter == ObjectsContainer.ObjectType.Enemy) SpawnKnives(objToSpawn);
         else Instantiate(objToSpawn.Obj, objToSpawn.SpawnPosition.transform.position,
-                Quaternion.Euler(0f, 0f, 0f));
+                Quaternion.Euler(0f, 0f, 0f)).transform.GetComponent<KnifeThrow>().enabled = true;
     }
 
     private void SpawnKnives(ObjectsContainer objToSpawn)
@@ -41,7 +40,9 @@ public class Spawner : MonoBehaviour
             instantiatedKnife.transform.parent = instantiatedEnemy.transform;
             instantiatedKnife.GetComponent<InputManager>().enabled = false;
             instantiatedKnife.GetComponent<KnifeThrow>().enabled = false;
+            instantiatedKnife.GetComponent<Collider2D>().enabled = true;
         }
+        instantiatedEnemy.transform.Rotate(new Vector3(0f, 0f, 10f * Random.Range(1f, 360f)));
     }
 }
 

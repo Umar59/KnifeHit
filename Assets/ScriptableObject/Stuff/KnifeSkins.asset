@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae120834d5741d4d9d5674b16e085c1, type: 3}
   m_Name: KnifeSkins
   m_EditorClassIdentifier: 
-  skins:
+  skinContainers:
   - {fileID: 11400000, guid: 06c3140def0f33c46890f57f32c5bfe3, type: 2}
   - {fileID: 11400000, guid: 8354f9b30e00b19469812939dc309fed, type: 2}
   - {fileID: 11400000, guid: 2f1f2108ccac3ee46a59f6d683203866, type: 2}
@@ -23,4 +23,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 765a8629cbff1ad47905aad4e1bbfb35, type: 2}
   - {fileID: 11400000, guid: 8427540bbf54ecf41bf0b1a92d7445bf, type: 2}
   - {fileID: 11400000, guid: 1d10802bfae6974478e76a9d676ac460, type: 2}
-  selectedSkinName: Knife 7
+  selectedSkinName: Knife 4
+  stage: 0

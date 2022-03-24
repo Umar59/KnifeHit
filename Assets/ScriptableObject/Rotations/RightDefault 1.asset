@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotOrientation: 1
   rotationDegrees: 360
+  rotationTime: 5
   acceleration: 0
-  rotationTime: 1
