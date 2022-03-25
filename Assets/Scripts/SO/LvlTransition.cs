@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Transition", menuName = "Level Transition")]
 public class LvlTransition : ScriptableObject
 {
-    private int currentLevel;
-    [SerializeField]private int currentStage;
+    [SerializeField] private int currentLevel;
+    [SerializeField] private int currentStage;
     private void OnEnable()
     {
         currentLevel = 1;

@@ -11,14 +11,15 @@ public class KnifeThrow : MonoBehaviour
     private Sequence sequence;
 
     public UnityEvent OnGameOver = new UnityEvent();
-    private GameObject gameManager;
+    public UnityEvent OnScoreUpdate = new UnityEvent();
+    
 
     private void OnEnable()
     {
         transform.GetComponent<InputManager>().OnTouch += Throw;
         transform.GetComponent<InputManager>().OnTouch += SpawnNewKnife;
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        OnGameOver.AddListener(gameManager.GetComponent<GameManager>().GameOver);
+        OnGameOver.AddListener(gameObject.GetComponent<EventHandler>().GameOver);
+        OnScoreUpdate.AddListener(gameObject.GetComponent<EventHandler>().ScoreUpdate);
     }
     private void Start()
     {
@@ -57,6 +58,7 @@ public class KnifeThrow : MonoBehaviour
             transform.GetComponent<BoxCollider2D>().size = new Vector2(0.58f, 0.62f);
             transform.tag = "Stuck Knife";
             sequence.Kill();
+            OnScoreUpdate?.Invoke();
         }
         else if(collision.transform.tag == "Stuck Knife")
         {

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8094406354789686292}
   - component: {fileID: -4576275419732551271}
   - component: {fileID: 8810885949612274811}
+  - component: {fileID: 7122953580215246763}
   m_Layer: 0
   m_Name: Player 3
   m_TagString: Knife
@@ -143,6 +144,9 @@ MonoBehaviour:
   OnGameOver:
     m_PersistentCalls:
       m_Calls: []
+  OnScoreUpdate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &8810885949612274811
 Rigidbody2D:
   serializedVersion: 4
@@ -164,3 +168,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7122953580215246763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153276405855081686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77aff011ce3563a479041e7744bbac49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -215,6 +215,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1315556752}
+  - {fileID: 317578112}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -223,6 +224,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &317578111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317578112}
+  - component: {fileID: 317578113}
+  - component: {fileID: 317578114}
+  m_Layer: 5
+  m_Name: KnivesLeft
+  m_TagString: KnifeCount
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &317578112
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317578111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 66614502}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.747986, y: 50.737}
+  m_SizeDelta: {x: 9.495, y: 39.074}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &317578113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317578111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_Spacing: -80
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &317578114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317578111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a600f1cf1cc7bb541bd903fb74c31f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySkin: {fileID: 11400000, guid: bf0f8acd49c4b0140a8732915b6c71ce, type: 2}
+  knifeCountUI: {fileID: 3251656917941640909, guid: d98425b571f653944bb7323b279b6d4a, type: 3}
 --- !u!1 &368995420
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,8 +334,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf0f8acd49c4b0140a8732915b6c71ce, type: 2}
   - {fileID: 11400000, guid: 134b1dd6d28c08d4d9076fbdfcffae62, type: 2}
   knifeSkin: {fileID: 11400000, guid: 134b1dd6d28c08d4d9076fbdfcffae62, type: 2}
-  spawnRotationFrom: 30
-  spawnRotationTo: 90
 --- !u!4 &368995422
 Transform:
   m_ObjectHideFlags: 0
@@ -413,7 +489,7 @@ GameObject:
   - component: {fileID: 1315556754}
   - component: {fileID: 1315556753}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

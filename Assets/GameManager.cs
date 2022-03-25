@@ -37,7 +37,11 @@ public class GameManager : MonoBehaviour
                 transition.CurrentLevel = 1;
                 transition.CurrentStage++;
 
-                if (enemySkin.SkinContainers.Length < enemySkin.Stage + 1) enemySkin.Stage = 1;
+                if (enemySkin.SkinContainers.Length < enemySkin.Stage +1)
+                {
+                    transition.CurrentStage = 1;
+                    enemySkin.Stage = 1;
+                }
                 else enemySkin.Stage = transition.CurrentStage;
 
             }

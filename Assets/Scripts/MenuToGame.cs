@@ -11,18 +11,22 @@ public class MenuToGame : MonoBehaviour
 
 
     [SerializeField] private GameObject[] UI;
+
     [SerializeField] private float travelTime;
     [SerializeField] private float travelDistance;
     [SerializeField] private float knifeTravelTime;
     [SerializeField] private float knifeTravelDistance;
-    private GameObject _canvas;
 
-    private void Start() 
+    private VerticalLayoutGroup verticalLayout;
+
+    private void OnEnable() 
     { 
-        _canvas = transform.parent.gameObject;
+        verticalLayout = transform.parent.GetComponent<VerticalLayoutGroup>();
+       // verticalLayout.enabled = true;
     }
     public void MoveOut()
     {
+        //verticalLayout.enabled = false;
         foreach (GameObject UIElement in UI)    //dependency from literals must be disposed. Even looks strange
         {
             switch (UIElement.name)
@@ -31,6 +35,7 @@ public class MenuToGame : MonoBehaviour
                     UIElement.SetActive(false);
                     UIElement.transform.DOMoveX(UIElement.transform.position.x + travelDistance, travelTime, false);
                     UIElement.SetActive(true);
+                    Debug.Log("start");
                     break;
 
                 case "Knife":
@@ -52,7 +57,6 @@ public class MenuToGame : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         SceneManager.LoadScene("GameScene");
-        //_canvas.SetActive(false);
     }
 }
 

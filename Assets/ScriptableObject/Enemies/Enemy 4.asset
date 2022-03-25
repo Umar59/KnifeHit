@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Enemy 4
   m_EditorClassIdentifier: 
   obj: {fileID: 6314474833382554584, guid: 37f06807f91583142afded7d0eb812c8, type: 3}
-  knifeCapacity: 6
-  knivesSpawning: 6
+  knifeCapacity: 4
+  knivesSpawning: 5
   objName: Enemy 4
   spawnPosition: {fileID: 1230340071206985474, guid: 45a74efe4f0ee4f4c83e7fcc1f9264db, type: 3}
   objectType: 0

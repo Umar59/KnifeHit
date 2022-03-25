@@ -8,11 +8,11 @@ public class MoveMenu: MonoBehaviour
 {
     [SerializeField] private GameObject _nextMenu;
     [SerializeField] private UnityEvent OnGameStart;
-    private GameObject _currentMenu;
+    [SerializeField] private GameObject _currentMenu;
 
     private void Start()
     {
-        _currentMenu = this.transform.parent.gameObject;
+        //_currentMenu = this.transform.parent.gameObject;
     }
     public void Move(GameObject _nextMenu)
     {
