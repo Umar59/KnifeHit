@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 public class MenuToGame : MonoBehaviour
 {
@@ -16,14 +18,7 @@ public class MenuToGame : MonoBehaviour
     [SerializeField] private float travelDistance;
     [SerializeField] private float knifeTravelTime;
     [SerializeField] private float knifeTravelDistance;
-
-    private VerticalLayoutGroup verticalLayout;
-
-    private void OnEnable() 
-    { 
-        verticalLayout = transform.parent.GetComponent<VerticalLayoutGroup>();
-       // verticalLayout.enabled = true;
-    }
+    
     public void MoveOut()
     {
         //verticalLayout.enabled = false;
@@ -55,7 +50,6 @@ public class MenuToGame : MonoBehaviour
     private IEnumerator WaitForUI(float time)
     {
         yield return new WaitForSeconds(time);
-
         SceneManager.LoadScene("GameScene");
     }
 }

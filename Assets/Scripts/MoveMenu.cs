@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MoveMenu: MonoBehaviour
 {
-    [SerializeField] private GameObject _nextMenu;
     [SerializeField] private UnityEvent OnGameStart;
     [SerializeField] private GameObject _currentMenu;
 
@@ -14,10 +13,10 @@ public class MoveMenu: MonoBehaviour
     {
         //_currentMenu = this.transform.parent.gameObject;
     }
-    public void Move(GameObject _nextMenu)
+    public void Move(GameObject nextMenu)
     {
 
-        _nextMenu.SetActive(true);
+        nextMenu.SetActive(true);
         _currentMenu.SetActive(false);
 
         MenuStack.state.Push(_currentMenu);                 //adds current menu in the stack so next menu can return to current

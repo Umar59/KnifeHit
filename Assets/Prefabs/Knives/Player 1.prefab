@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1107082273155173717}
   - component: {fileID: 1895469195267940285}
   - component: {fileID: 3244570646856412037}
-  - component: {fileID: 518342586531289983}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Knife
@@ -170,18 +169,6 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 7
 --- !u!114 &3244570646856412037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785441418005489889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aff011ce3563a479041e7744bbac49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &518342586531289983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

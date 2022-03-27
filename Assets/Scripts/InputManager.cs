@@ -14,9 +14,9 @@ public class InputManager : MonoBehaviour
         if (timeElapsed > touchDelay)
         {
             //for mobile                                                        //for pc
-            if ((Input.touchCount > 0 && touch.phase == TouchPhase.Began) || Input.GetMouseButtonUp(0))
+            if ((Input.touchCount > 0 && touch.phase == TouchPhase.Ended) || Input.GetMouseButtonUp(0))
             {
-                OnTouch?.Invoke();
+                OnTouch?.Invoke();      //must be rewritten
                 timeElapsed = 0;
             }
         }
