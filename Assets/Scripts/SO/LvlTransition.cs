@@ -12,6 +12,12 @@ public class LvlTransition : ScriptableObject
         currentLevel = 1;
         currentStage = 1;
     }
+
+    public void Restart()
+    {
+        currentLevel = 1;
+        currentStage = 1;
+    }
     public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
     public int CurrentStage { get => currentStage; set => currentStage = value; }
 }

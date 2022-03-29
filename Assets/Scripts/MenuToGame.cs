@@ -18,7 +18,7 @@ public class MenuToGame : MonoBehaviour
     [SerializeField] private float travelDistance;
     [SerializeField] private float knifeTravelTime;
     [SerializeField] private float knifeTravelDistance;
-    
+
     public void MoveOut()
     {
         //verticalLayout.enabled = false;
@@ -51,6 +51,7 @@ public class MenuToGame : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene("GameScene");
+        
     }
 }
 
