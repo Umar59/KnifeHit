@@ -10,6 +10,8 @@ TagManager:
   - Stuck Knife
   - GameManager
   - KnifeCount
+  - MainMenu
+  - GameOverMenu
   layers:
   - Default
   - TransparentFX

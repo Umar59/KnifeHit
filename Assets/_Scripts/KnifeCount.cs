@@ -10,6 +10,7 @@ public class KnifeCount : MonoBehaviour
     private GameObject[] knifeCountElements;
     private int totalCount;
     private int currentCount = 0;
+    
 
     private void OnEnable()
     {

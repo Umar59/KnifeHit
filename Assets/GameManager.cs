@@ -45,8 +45,19 @@ public class GameManager : MonoBehaviour
                 else enemySkin.Stage = transition.CurrentStage;
 
             }
-            Debug.Log($"level: {transition.CurrentLevel}");
-            Debug.Log($"stage: {transition.CurrentStage}");
+        }
+    }
+
+    public void ScoreUpdate()
+    {
+        transition.CurrentKnifeScore++;
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            if (transition.CurrentKnifeScore > PlayerPrefs.GetInt("Score"))
+            {
+                PlayerPrefs.SetInt("Score", transition.CurrentKnifeScore);
+                Debug.Log("new score");
+            }
         }
     }
 }

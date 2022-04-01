@@ -19,6 +19,8 @@ public class MenuToGame : MonoBehaviour
     [SerializeField] private float knifeTravelTime;
     [SerializeField] private float knifeTravelDistance;
 
+    public float TravelDistance => travelDistance;
+
     public void MoveOut()
     {
         //verticalLayout.enabled = false;
@@ -30,11 +32,13 @@ public class MenuToGame : MonoBehaviour
                     UIElement.SetActive(false);
                     UIElement.transform.DOMoveX(UIElement.transform.position.x + travelDistance, travelTime, false);
                     UIElement.SetActive(true);
-                    Debug.Log("start");
                     break;
 
                 case "Knife":
                     UIElement.transform.DOMoveY(UIElement.transform.position.y + knifeTravelDistance * -1, knifeTravelTime);
+                    break;
+                case "HighScore":
+                    UIElement.transform.DOMoveX(UIElement.transform.position.x + travelDistance, travelTime, false);
                     break;
 
                 default:
@@ -53,5 +57,6 @@ public class MenuToGame : MonoBehaviour
         SceneManager.LoadScene("GameScene");
         
     }
+    
 }
 

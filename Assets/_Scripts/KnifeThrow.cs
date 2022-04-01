@@ -63,7 +63,6 @@ public class KnifeThrow : MonoBehaviour
         else if(collision.transform.tag == "Stuck Knife")
         {
             OnGameOver?.Invoke();
-            Debug.Log("gameover");
         }
     }
 }

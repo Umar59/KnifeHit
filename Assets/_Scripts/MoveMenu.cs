@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MoveMenu: MonoBehaviour
 {
     [SerializeField] private UnityEvent OnGameStart;
+    [SerializeField] private UnityEvent OnBackGroundFade;
     [SerializeField] private GameObject _currentMenu;
 
     private void Start()
@@ -23,9 +24,12 @@ public class MoveMenu: MonoBehaviour
     }
     public void Return()
     {
+        if (MenuStack.state.Peek().name == "MainMenu")
+        {
+            OnBackGroundFade?.Invoke();
+        }
         _currentMenu.SetActive(false);
         MenuStack.state.Pop().SetActive(true);              //turns on previous menu
-
         MenuStack.state.Push(_currentMenu);                 
     }
     public void StartGame()
