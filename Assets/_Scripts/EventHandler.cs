@@ -28,7 +28,6 @@ public class EventHandler : MonoBehaviour
     public void ScoreUpdate()
     {
         OnScoreUpdate?.Invoke();
-        knifeCount.UpdateUI();
     }
 
 }

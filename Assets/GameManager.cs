@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,8 +9,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LvlTransition transition;
     [SerializeField] private int maxLevel;
     [SerializeField] private Skins enemySkin;
+    public delegate void OnScoreUpdate(int score);
+    public static event OnScoreUpdate scoreUpdate;
+    
     private EnemyDeath enemy;
     private bool isGameOver = false;
+    
     private void OnEnable()
     {
         enemySkin.Stage = transition.CurrentStage;
@@ -51,6 +56,7 @@ public class GameManager : MonoBehaviour
     public void ScoreUpdate()
     {
         transition.CurrentKnifeScore++;
+        scoreUpdate?.Invoke(transition.CurrentKnifeScore);
         if (PlayerPrefs.HasKey("Score"))
         {
             if (transition.CurrentKnifeScore > PlayerPrefs.GetInt("Score"))

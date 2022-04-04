@@ -7,7 +7,8 @@ public class LvlTransition : ScriptableObject
 {
     [SerializeField] private int currentLevel;
     [SerializeField] private int currentStage;
-    [SerializeField] private int currentKnifeScore;
+    public static int currentKnifeScore;
+    
     private void OnEnable()
     {
         currentLevel = 1;

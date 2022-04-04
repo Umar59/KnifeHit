@@ -49,7 +49,7 @@ public class KnifeThrow : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Enemy")
+        if (collision.transform.CompareTag("Enemy"))
         {
             transform.parent = collision.collider.transform;
             transform.GetComponent<KnifeThrow>().enabled = false;
@@ -60,7 +60,7 @@ public class KnifeThrow : MonoBehaviour
             sequence.Kill();
             OnScoreUpdate?.Invoke();
         }
-        else if(collision.transform.tag == "Stuck Knife")
+        else if(collision.transform.CompareTag("Stuck Knife"))
         {
             OnGameOver?.Invoke();
         }

@@ -3841,8 +3841,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'BEST SCORE:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3866,12 +3866,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41
+  m_fontSize: 49.6
   m_fontSizeBase: 37.65
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 41
+  m_fontSizeMax: 49.6
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4520,10 +4520,10 @@ MonoBehaviour:
   - {fileID: 1671069894}
   - {fileID: 1181161262}
   - {fileID: 2071183343}
-  travelTime: 0.3
+  travelTime: 0.15
   travelDistance: 5
-  knifeTravelTime: 0.21
-  knifeTravelDistance: 3.13
+  knifeTravelTime: 0.105
+  knifeTravelDistance: 2.27
 --- !u!1 &1689276128
 GameObject:
   m_ObjectHideFlags: 0

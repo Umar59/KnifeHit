@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,10 @@ public class KnifeCount : MonoBehaviour
     private int totalCount;
     private int currentCount = 0;
     
-
+    //leftBottom bar showing how many knives you have to throw to win 
     private void OnEnable()
     {
+        GameManager.scoreUpdate += UpdateUI;
         totalCount = enemySkin.GetSkin().KnifeCapacity;
         knifeCountElements = new GameObject[totalCount];
 
@@ -22,9 +24,14 @@ public class KnifeCount : MonoBehaviour
            knifeCountElements[i] = Instantiate(knifeCountUI, transform);
         }
     }
-    public void UpdateUI()
+    public void UpdateUI(int score)
     {
         currentCount++;
         knifeCountElements[totalCount - currentCount].transform.GetComponent<Image>().color = Color.grey;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.scoreUpdate -= UpdateUI;
     }
 }
